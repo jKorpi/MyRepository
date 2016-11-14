@@ -36,7 +36,7 @@ public class Account {
 		to.balance += amount;
 		transactionList[nTransactions] = new TransferToTransaction(amount, to.owner);
 		nTransactions++;
-		to.transactionList[nTransactions] = new TransferFromTransaction(amount, owner);
+		to.transactionList[to.nTransactions] = new TransferFromTransaction(amount, owner);
 		to.nTransactions++;
 		
 	}

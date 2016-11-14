@@ -4,24 +4,34 @@ import java.util.Scanner;
 public class MainEMS {
 
 	public static void main(String[] args) {
+
+	UserInput.employeeCatalog.add(new Technician("Pin Jim", "29 May 1970", 33000, "female", 10));
+	UserInput.employeeCatalog.add(new Technician("Lin Jen", "23 April 1991", 29000, "female", 10));
+	UserInput.employeeCatalog.add(new Administrator("Tom Boll", "12 January 1979", 25000, "male", 5));
 	
-		UserInput.firstChoice();
+	UserInput.firstChoice();
 		
-		ArrayList<Employee> employeeCatalog = new ArrayList<Employee>();
-					
-	
-//		Technician technician1 = new Technician("Pin Jim", "29 May 1970", 33000, "female");
-//		Technician technician2 = new Technician("Lin Jen", "23 April 1991", 29000, "female");
-//		Administrator administrator1 = new Administrator("Tom Boll", "12 January 1979", 25000, "male");
-//		
-//		employeeCatalog.add(technician1);
-//		employeeCatalog.add(technician2);
-//		employeeCatalog.add(administrator1);
-//		
-//		System.out.println(employeeCatalog.size());
-//		
-//		System.out.println(technician1.getFullName() + " will get " + technician1.calculateBonus(technician1.getSalary()) + " kr in bonus.");
-//		System.out.println(administrator1.getFullName() + " is employee number " + administrator1.getId());
+		
+		System.out.println(UserInput.employeeCatalog.size());
+		System.out.println(UserInput.employeeCatalog.get(1)); //standard toString method
+		
+
+		for (Employee e : UserInput.employeeCatalog) { //e = element in list
+		System.out.println(e.toString());
+		}
+		
+		int totalSalary = 0;
+		for (Employee e : UserInput.employeeCatalog)  {
+			totalSalary += e.getSalary();
+		}
+		System.out.println((double) totalSalary / UserInput.employeeCatalog.size());
+
+		
+		for (Employee e : UserInput.employeeCatalog)  {
+			System.out.println(e.getId() + " " + e.getFullName());
 	}
 
-}
+	
+	}
+	}
+ 

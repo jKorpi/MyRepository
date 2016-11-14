@@ -7,7 +7,7 @@ public abstract class Employee {
 	private String gender;
 	private int id;
 	
-	int numberOfEmployees = 0;
+	static int numberOfEmployees = 0;
 	
 	public Employee(String fullName, String dateOfBirth, int salary, String gender) {
 		this.fullName = fullName;
@@ -15,11 +15,23 @@ public abstract class Employee {
 		this.salary = salary;
 		this.gender = gender;
 		numberOfEmployees++;
-		id = numberOfEmployees;
+		this.id = numberOfEmployees;
 	}
 
 	public String getFullName() {
 		return fullName;
+	}
+
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public static int getNumberOfEmployees() {
+		return numberOfEmployees;
 	}
 
 	public int getSalary() {
@@ -39,6 +51,11 @@ public abstract class Employee {
 	}
 	
 	public abstract int calculateBonus(int salary);
+
+	@Override
+	public String toString() {
+		return "Name: " + fullName + ", id: " + id;
+	}
 		
 	}
 	

@@ -1,8 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInput {
 
+	static ArrayList<Employee> employeeCatalog = new ArrayList<Employee>();
 	static Scanner scanner = new Scanner(System.in);
+	
 	
 	public static void firstChoice() {
 		System.out.println("What would you like to do?");
@@ -19,6 +22,7 @@ public class UserInput {
 			System.out.println("2. Delete employee");
 			System.out.println("3. Update name of employee");
 			System.out.println("4. Back to Main Menu");
+			
 			int choice2 = scanner.nextInt();
 			
 			switch (choice2) {
@@ -26,7 +30,10 @@ public class UserInput {
 			System.out.println("Adding employee");
 			break;
 		case 2:
-			System.out.println("Deleting employee");
+			System.out.println("Who would you like to delete? (input employee number)");
+			int e = scanner.nextInt();
+		
+			System.out.println("Deleting employee number " + e);
 			break;
 		case 3:
 			System.out.println("Updating name of employee");

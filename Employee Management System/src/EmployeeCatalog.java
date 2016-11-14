@@ -8,8 +8,12 @@ public class EmployeeCatalog {
 		return employeeCatalog;
 	}
 	
-	public void addEmployee(Employee newEmployee) {
-		employeeCatalog.add(newEmployee);
+	public void addEmployee(Employee e) {
+		employeeCatalog.add(e);
+	}
+	
+	public void deleteEmployee(Employee e) {
+		employeeCatalog.remove(e);
 	}
 	
 //	public Employee findEmployee(String fullName) {
