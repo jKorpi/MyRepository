@@ -3,8 +3,8 @@ public class Administrator extends Employee {
 	
 	private int bonusBase;
 	
-	public Administrator(String fullName, String dateOfBirth, int salary, String gender, int bonusBase) {
-		super(fullName, dateOfBirth, salary, gender);
+	public Administrator(String fullName, String dateOfBirth, int salary, String gender, int bonusBase, boolean companyPhone) {
+		super(fullName, dateOfBirth, salary, gender, companyPhone);
 		this.bonusBase = bonusBase;
 	}
 

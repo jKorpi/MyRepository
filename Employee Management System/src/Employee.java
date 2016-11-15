@@ -6,10 +6,11 @@ public abstract class Employee {
 	private int salary;
 	private String gender;
 	private int id;
+	private boolean companyPhone;
 	
 	static int numberOfEmployees = 0;
 	
-	public Employee(String fullName, String dateOfBirth, int salary, String gender) {
+	public Employee(String fullName, String dateOfBirth, int salary, String gender, boolean companyPhone) {
 		this.fullName = fullName;
 		this.dateOfBirth = dateOfBirth;
 		this.salary = salary;
@@ -20,6 +21,10 @@ public abstract class Employee {
 
 	public String getFullName() {
 		return fullName;
+	}
+
+	public boolean isCompanyPhone() {
+		return companyPhone;
 	}
 
 	public String getDateOfBirth() {
@@ -52,10 +57,10 @@ public abstract class Employee {
 	
 	public abstract int calculateBonus(int salary);
 
-	@Override
-	public String toString() {
-		return "Name: " + fullName + ", id: " + id;
-	}
+//	@Override
+//	public String toString() {
+//		return "Name: " + fullName + ", id: " + id;
+//	}
 		
 	}
 	
