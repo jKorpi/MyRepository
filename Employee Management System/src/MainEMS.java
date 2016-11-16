@@ -2,31 +2,34 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainEMS {
-	
+
 	static ArrayList<Employee> employee1 = new ArrayList<>();
 	static Scanner scanner = new Scanner(System.in);
 
-	
-	
 	public static void main(String[] args) {
-boolean loop=true;
 
-		while(loop){
-			
-		int choice= UserInterface.mainMenu();
-		
-	switch (choice) {
-	case 1:
-		int num = UserInterface.employeeManagementMenu();
-       EmployeeManagement.takeCareOfEmployee(num);	
-         break;
-	case 2:
-		num = UserInterface.employeeStatisticsMenu();
-	
-	}
-	
-		
+		/* adding some employees */ employee1.add(new Programmer("Tom", "Boll", "850328", 30000, 2, false)); employee1.add(new Technician("Sim", "Pot", "790728", 20000, 3, true));	employee1.add(new Programmer("Pia", "Lim", "900428", 35000, 1, false)); employee1.add(new Administrator("Ann", "Kan", "790328", 40000, 1, true));
 
+		boolean loop = true;
+
+		while (loop) {
+
+			int choice = UserInterface.mainMenu();
+
+			switch (choice) {
+			case 1:
+				int num = UserInterface.employeeManagementMenu();
+				EmployeeManagement.takeCareOfEmployee(num);
+				break;
+			case 2:
+				num = UserInterface.employeeStatisticsMenu();
+				EmployeeStatistics.employeeStats(num);
+				break;
+			case 0:
+				loop = false;
+			}
+		}
+
+		System.out.println("Goodbye!");
 	}
-}
 }

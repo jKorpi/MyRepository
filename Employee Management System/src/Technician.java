@@ -1,20 +1,15 @@
 
 public class Technician extends Employee {
-	
-		private int bonusBase;
-	
-		public Technician(String fullName, String dateOfBirth, int salary, String gender, int bonusBase, boolean companyPhone) {
-			super(fullName, dateOfBirth, salary, gender, companyPhone);
-			this.bonusBase = bonusBase;
+		
+		public Technician(String firstName, String lastName, String dateOfBirth, int salary, int gender, boolean companyPhone) {
+			super(firstName, lastName, dateOfBirth, salary, gender, companyPhone);
 		}
 		
-		public int getBonusBase() {
-			return bonusBase;
-		}
+	
 
 		@Override
 		public int calculateBonus(int salary) {
-			int bonus = (salary / bonusBase);
+			int bonus = (int)(salary*0.05);
 			return bonus;
 		}
 	

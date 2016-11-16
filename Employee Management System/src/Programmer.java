@@ -1,27 +1,16 @@
 
 public class Programmer extends Employee {
-	
-	private int bonusBase;
 
-	public Programmer(String fullName, String dateOfBirth, int salary, String gender, boolean companyPhone,
-			int bonusBase) {
-		super(fullName, dateOfBirth, salary, gender, companyPhone);
-		this.bonusBase = bonusBase;
+	public Programmer(String firstName, String lastName, String dateOfBirth, int salary, int gender,
+			boolean companyPhone) {
+		super(firstName, lastName, dateOfBirth, salary, gender, companyPhone);
+
 	}
 
-	public int getBonusBase() {
-		return bonusBase;
-	}
-
-	public void setBonusBase(int bonusBase) {
-		this.bonusBase = bonusBase;
-	}
-	
 	@Override
 	public int calculateBonus(int salary) {
-		int bonus = (salary / bonusBase);
+		int bonus = (int)(salary*0.1);
 		return bonus;
 	}
-	
-	}
 
+}

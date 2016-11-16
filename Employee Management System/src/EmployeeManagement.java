@@ -2,23 +2,20 @@
 public class EmployeeManagement {
 
 	public static void takeCareOfEmployee(int num) {
-		
-		switch (num){
+
+		switch (num) {
 		case 1:
-			//add
+			AddEmployee.add();
 			break;
 		case 2:
-			//delete
+			DeleteEmployee.deleteEmployee();
 			break;
 		case 3:
-			//update
+		UpdateEmployee.updateTool();
 			break;
 		case 0:
-			//return to main
+			UserInterface.mainMenu();
 		}
 	}
-	
-	
-	
 
 }

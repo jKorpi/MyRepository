@@ -1,26 +1,46 @@
 
 public abstract class Employee {
 	
-	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String dateOfBirth;
 	private int salary;
-	private String gender;
+	private int gender;
 	private int id;
 	private boolean companyPhone;
+	private int bonus;
 	
-	static int numberOfEmployees = 0;
+	static int numberOfEmployees;
 	
-	public Employee(String fullName, String dateOfBirth, int salary, String gender, boolean companyPhone) {
-		this.fullName = fullName;
+	public Employee(String firstName, String lastName, String dateOfBirth, int salary, int gender, boolean companyPhone) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
 		this.salary = salary;
 		this.gender = gender;
 		numberOfEmployees++;
 		this.id = numberOfEmployees;
+		
 	}
 
-	public String getFullName() {
-		return fullName;
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public boolean isCompanyPhone() {
@@ -31,7 +51,7 @@ public abstract class Employee {
 		return dateOfBirth;
 	}
 
-	public String getGender() {
+	public int getGender() {
 		return gender;
 	}
 
@@ -46,9 +66,9 @@ public abstract class Employee {
 	public int getId() {
 		return id;
 	}
-
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	
+	public int getBonus() {
+		return bonus;
 	}
 
 	public void setSalary(int salary) {
@@ -57,11 +77,6 @@ public abstract class Employee {
 	
 	public abstract int calculateBonus(int salary);
 
-//	@Override
-//	public String toString() {
-//		return "Name: " + fullName + ", id: " + id;
-//	}
-		
-	}
+}
 	
 	
