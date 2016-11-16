@@ -41,4 +41,15 @@ public class StatisticsHelper {
 		}
 		return totalBonus;
 	}
+	
+	public static int womenPercentage() {
+		int womenNum = 0;
+		for (Employee e : MainEMS.employee1) {
+			if (e.getGender()==1)
+				++womenNum;
+		}
+			double percentage = ((double)womenNum / MainEMS.employee1.size()) * 100;
+		return (int) percentage;
+	}
+	
 }

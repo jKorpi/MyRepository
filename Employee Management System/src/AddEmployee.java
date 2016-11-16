@@ -44,7 +44,6 @@ public class AddEmployee {
 
 		} while (answer.equalsIgnoreCase("y"));
 		
-		UserInterface.employeeManagementMenu();
 	}
 
 }

@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class MainEMS {
 
 	static ArrayList<Employee> employee1 = new ArrayList<>();
-	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		/* adding some employees */ employee1.add(new Programmer("Tom", "Boll", "850328", 30000, 2, false)); employee1.add(new Technician("Sim", "Pot", "790728", 20000, 3, true));	employee1.add(new Programmer("Pia", "Lim", "900428", 35000, 1, false)); employee1.add(new Administrator("Ann", "Kan", "790328", 40000, 1, true));
+		/* adding some employees */ employee1.add(new Programmer("Tom", "Boll", "850328", 30000, 2, false)); employee1.add(new Technician("Paul", "Pot", "790728", 200, 3, true));	employee1.add(new Programmer("Pia", "Lim", "900428", 35000, 1, false)); employee1.add(new Administrator("Ann", "Kan", "790328", 40000, 1, true));
 
 		boolean loop = true;
 

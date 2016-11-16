@@ -5,19 +5,19 @@ public class EmployeeStatistics {
 
 		switch (num) {
 		case 1:
-			System.out.println("The average salary is: " + StatisticsHelper.averageSalary());
+			System.out.println("The average salary is: " + StatisticsHelper.averageSalary()+" SEK");
 			break;
 		case 2:
-			System.out.println("The maximum salary is: " + StatisticsHelper.maxSalary());
+			System.out.println("The maximum salary is: " + StatisticsHelper.maxSalary()+" SEK");
 			break;
 		case 3:
-			System.out.println("The minimum salary is: " + StatisticsHelper.minSalary());
+			System.out.println("The minimum salary is: " + StatisticsHelper.minSalary()+" SEK");
 			break;
 		case 4:
-			System.out.println("The total bonus is: " + StatisticsHelper.totalBonus());
+			System.out.println("The total bonus is: " + StatisticsHelper.totalBonus()+" SEK");
 			break;
 		case 5:
-			// women percentage
+			System.out.println("The percentage of women is: " + StatisticsHelper.womenPercentage()+" %");
 			break;
 		case 0:
 			UserInterface.mainMenu();

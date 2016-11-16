@@ -11,7 +11,7 @@ public class EmployeeManagement {
 			DeleteEmployee.deleteEmployee();
 			break;
 		case 3:
-		UpdateEmployee.updateTool();
+			UpdateEmployee.updateTool();
 			break;
 		case 0:
 			UserInterface.mainMenu();
